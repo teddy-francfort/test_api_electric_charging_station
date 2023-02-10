@@ -13,6 +13,7 @@
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
+        "friendsofphp/php-cs-fixer": "^3.14",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",
@@ -49,6 +50,9 @@
         ],
         "phpstan": [
             "phpstan analyse -l max app tests"
+        ],
+        "php-cs-fixer": [
+            "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer fix"
         ]
     },
     "extra": {
