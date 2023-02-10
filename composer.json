@@ -51,9 +51,11 @@
         "phpstan": [
             "phpstan analyse -l max app tests"
         ],
+        "stan": "@phpstan",
         "php-cs-fixer": [
             "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer fix"
-        ]
+        ],
+        "csfix": "@php-cs-fixer"
     },
     "extra": {
         "laravel": {
