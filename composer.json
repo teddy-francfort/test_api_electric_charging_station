@@ -48,7 +48,7 @@
             "@php artisan key:generate --ansi"
         ],
         "phpstan": [
-            "phpstan analyse -l max app tests"
+            "phpstan analyse -l max app database tests"
         ],
         "stan": "@phpstan",
         "php-cs-fixer": [
