@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             OperatorSeeder::class,
             EvseSeeder::class,
+            CdrSeeder::class,
         ]);
     }
 }
