@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Database\Factories;
 
+use App\Models\Operator;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
 /**
@@ -12,6 +14,14 @@ use Illuminate\Support\Str;
  */
 final class OperatorFactory extends Factory
 {
+    public function create($attributes = [], ?Model $parent = null): Operator
+    {
+        /** @var Operator $operator */
+        $operator = parent::create($attributes, $parent);
+
+        return $operator;
+    }
+
     /**
      * Define the model's default state.
      *

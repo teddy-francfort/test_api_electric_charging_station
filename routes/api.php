@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::put('/cdrs', [\App\Http\Controllers\CdrController::class, 'store'])
+    ->name('cdrs.store');
+
+Route::get('/cdrs/{cdr:ref}', [\App\Http\Controllers\CdrController::class, 'show'])
+    ->name('cdrs.show')
+    ->missing(function () {
+        abort(Response::json([], 404));
+    });

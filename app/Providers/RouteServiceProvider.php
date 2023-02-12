@@ -30,8 +30,9 @@ class RouteServiceProvider extends ServiceProvider
         $this->configureRateLimiting();
 
         $this->routes(function () {
-            Route::middleware('api')
-                ->prefix('api')
+            Route::middleware(['api', 'auth.operator.token', 'logger.ocpi'])
+                ->prefix('ocpi')
+                ->name('ocpi.')
                 ->group(base_path('routes/api.php'));
         });
     }
