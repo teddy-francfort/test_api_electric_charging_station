@@ -116,5 +116,11 @@ return [
         'emergency' => [
             'path' => storage_path('logs/laravel.log'),
         ],
+
+        'ocpi' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/ocpi.log'),
+            'level' => env('LOG_LEVEL', 'debug'),
+        ],
     ],
 ];
